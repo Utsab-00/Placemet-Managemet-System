@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/styleslogin.css' %}">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">Placement System</div>
+    <ul>
+        <li><a href="{%url 'admin_list'%}">Admin</a></li>
+        <li><a href="{%url 'company_list'%}">Company</a></li>
+        <li><a href="{%url 'student_list'%}">Student</a></li>
+    </ul>
+</nav>
+
+<!-- Login Form -->
+<h2>Login</h2>
+
+{% if messages %}
+    {% for message in messages %}
+        <p style="color: red;">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+    
+    <label for="username">Username:</label>
+    <input type="text" name="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" required><br>
+
+    <label for="user_type">User Type:</label>
+    <select name="user_type" required>
+        <option value="student">Student</option>
+        <option value="company">Company</option>
+        <option value="admin">Admin</option>
+    </select><br>
+
+    <button type="submit">Login</button>
+</form>
+
+<p>Don't have an account? <a href="{% url 'home' %}">Back to Home</a></p>
+
+</body>
+</html>

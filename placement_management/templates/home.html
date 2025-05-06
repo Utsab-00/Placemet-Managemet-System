@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Django App</title>
+    <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
+</head>
+
+    <header>
+        <h1>Welcome to the Project</h1>
+    {% if request.session.logged_in %}
+        <p id="user_login">Welcome, {{ request.session.username }}! (<a href="{% url 'logout' %}">Logout</a>)</p>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a></p>
+    {% endif %}
+    </header>
+
+    <nav>
+        <a href="/students/">Students</a>
+        <a href="/companies/">Companies</a>
+        <a href="/admins/">Admins</a>
+        <a href="/login/" class="login-btn">Login</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Getting Started</h2>
+            <p>Use the navigation above to browse students, companies, and admins.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Django App. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

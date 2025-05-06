@@ -1,0 +1,73 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #1e90ff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navbar */
+nav {
+  background-color: #007acc;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #005fa3;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: #ccc;
+  margin-top: 40px;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #28a745;
+}
+
+.login-btn:hover {
+  background-color: #218838;
+}
+#user_login{
+  text-align: right;
+}

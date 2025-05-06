@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #007bff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: 40px auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .success-message {
+            display: none;
+            color: green;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Placement System</div>
+    <ul>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'student_list' %}">Student</a></li>
+        <li><a href="{% url 'company_list' %}">Company</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h2>Admin Registration Form</h2>
+    <form id="adminForm">
+
+        <div class="form-group">
+            <label for="adminName">Full Name:</label>
+            <input type="text" id="adminName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="adminId">Admin ID:</label>
+            <input type="text" id="adminId" required>
+        </div>
+
+        <div class="form-group">
+            <label for="adminEmail">Email:</label>
+            <input type="email" id="adminEmail" required>
+        </div>
+
+        <div class="form-group">
+            <label for="adminPhone">Phone Number:</label>
+            <input type="tel" id="adminPhone">
+        </div>
+
+        <div class="form-group">
+            <label for="department">Department:</label>
+            <input type="text" id="department" required>
+        </div>
+
+        <div class="form-group">
+            <label for="role">Role:</label>
+            <select id="role">
+                <option value="Placement Head">Placement Head</option>
+                <option value="Placement Officer">Placement Officer</option>
+                <option value="Coordinator">Coordinator</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Set Password:</label>
+            <input type="password" id="password" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+        Admin form submitted successfully! ✅
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById('adminForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // You can add real form submission logic here (API call)
+
+        // Show success message
+        successMessage.style.display = 'block';
+
+        // Optionally reset the form
+        form.reset();
+    });
+</script>
+
+</body>
+</html>
