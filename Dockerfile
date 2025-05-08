@@ -9,7 +9,7 @@ COPY requirements.txt .
 
 # Install MariaDB client libraries (for the container's OS)
 RUN apt-get update && \
-    apt-get install -y libmariadb-dev default-libmysql-dev && \
+    apt-get install -y libmariadb-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
