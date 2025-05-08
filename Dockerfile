@@ -8,14 +8,15 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install MariaDB client libraries (for the container's OS)
-RUN apt-get update && \
-    apt-get install -y libmariadb-dev && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y libmariadb-dev default-libmysql-dev
+
+# Install Rust and Cargo
+RUN apt-get update && apt-get install -y --no-install-recommends curl
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="$PATH:/root/.cargo/bin"
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-#update pip vertion
-RUN pip install --upgrade pip
 
 # Copy the entire project into the container
 COPY . .
