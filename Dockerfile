@@ -14,6 +14,8 @@ RUN apt-get update && \
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+#update pip vertion
+RUN pip install --upgrade pip
 
 # Copy the entire project into the container
 COPY . .
