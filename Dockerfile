@@ -8,7 +8,9 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install MariaDB client libraries (for the container's OS)
-RUN apt-get update && apt-get install -y libmariadb-dev default-libmysql-dev
+RUN apt-get update && \
+    apt-get install -y libmariadb-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 # Install Rust and Cargo
 RUN apt-get update && apt-get install -y --no-install-recommends curl
