@@ -104,32 +104,33 @@
 
         <div class="form-group">
             <label for="adminName">Full Name:</label>
-            <input type="text" id="adminName" required>
+            <input type="text" id="adminName" name="adminName" required>
         </div>
 
         <div class="form-group">
             <label for="adminId">Admin ID:</label>
-            <input type="text" id="adminId" required>
+            <input type="text" id="adminId"name="adminId" required>
         </div>
 
         <div class="form-group">
             <label for="adminEmail">Email:</label>
-            <input type="email" id="adminEmail" required>
+            <input type="email" id="adminEmail" name="adminEmail" required>
         </div>
 
         <div class="form-group">
             <label for="adminPhone">Phone Number:</label>
-            <input type="tel" id="adminPhone">
+            <input type="tel" id="adminPhone" name="adminPhone">
         </div>
 
         <div class="form-group">
             <label for="department">Department:</label>
-            <input type="text" id="department" required>
+            <input type="text" id="department" name="department" required>
         </div>
 
         <div class="form-group">
             <label for="role">Role:</label>
-            <select id="role">
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Select Role</option>
                 <option value="Placement Head">Placement Head</option>
                 <option value="Placement Officer">Placement Officer</option>
                 <option value="Coordinator">Coordinator</option>
@@ -138,12 +139,12 @@
 
         <div class="form-group">
             <label for="experience">Years of Experience:</label>
-            <input type="number" id="experience">
+            <input type="number" id="experience" name="experience" min="0" required>
         </div>
 
         <div class="form-group">
             <label for="password">Set Password:</label>
-            <input type="password" id="password" required>
+            <input type="password" id="password" name="password" required>
         </div>
 
         <button type="submit">Submit</button>
