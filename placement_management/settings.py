@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-n-0=gy!k*s*(2#6zh_a)gt!f6h9faq-b8*h(tjc^wqt*l69rv6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = ['https://placemet-managemet-system-1.onrender.com']
+# This is the domain name of your application on Render
 ALLOWED_HOSTS = ['placemet-managemet-system-1.onrender.com']
 
 
