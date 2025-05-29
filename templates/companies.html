@@ -104,67 +104,68 @@
 
         <div class="form-group">
             <label for="companyName">Company Name:</label>
-            <input type="text" id="companyName" required>
+            <input type="text" id="companyName" name="companyName" placeholder="e.g., Tech Solutions Ltd." required>
         </div>
 
         <div class="form-group">
             <label for="website">Website:</label>
-            <input type="url" id="website">
+            <input type="url" id="website" name="website" placeholder="https://www.example.com" required>
         </div>
 
         <div class="form-group">
             <label for="industry">Industry Type:</label>
-            <input type="text" id="industry">
+            <input type="text" id="industry" name="industry" placeholder="e.g., IT, Finance, Healthcare" required>
         </div>
 
         <div class="form-group">
             <label for="address">Head Office Address:</label>
-            <textarea id="address" rows="2"></textarea>
+            <textarea id="address" rows="2" name="address"></textarea>
         </div>
 
         <div class="form-group">
             <label for="contactName">Contact Person Name:</label>
-            <input type="text" id="contactName" required>
+            <input type="text" id="contactName" name="contactName" required>
         </div>
 
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" required>
         </div>
 
         <div class="form-group">
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone">
+            <input type="tel" id="phone" name="phone">
         </div>
 
         <div class="form-group">
             <label for="jobProfiles">Job Profiles Offered:</label>
-            <textarea id="jobProfiles" rows="2"></textarea>
+            <textarea id="jobProfiles" rows="2" name="jobProfiles"></textarea>
         </div>
 
         <div class="form-group">
             <label for="location">Locations of Posting:</label>
-            <input type="text" id="location">
+            <input type="text" id="location" name="location" placeholder="e.g., Bangalore, Hyderabad">
         </div>
 
         <div class="form-group">
             <label for="eligibility">Eligibility Criteria:</label>
-            <textarea id="eligibility" rows="2"></textarea>
+            <textarea id="eligibility" rows="2" name="eligibility"></textarea>
         </div>
 
         <div class="form-group">
             <label for="selectionProcess">Selection Process:</label>
-            <textarea id="selectionProcess" rows="2"></textarea>
+            <textarea id="selectionProcess" rows="2" name="selectionProcess"></textarea>
         </div>
 
         <div class="form-group">
             <label for="ctc">CTC Offered:</label>
-            <input type="text" id="ctc">
+            <input type="text" id="ctc" name="ctc" placeholder="e.g., 6 LPA">
         </div>
 
         <div class="form-group">
             <label for="internship">Internship Offered:</label>
-            <select id="internship">
+            <select id="internship" name="internshiip">
+                <option value="" disabled selected>Select Internship</option>
                 <option value="No">No</option>
                 <option value="Yes">Yes</option>
             </select>
@@ -172,7 +173,7 @@
 
         <div class="form-group">
             <label for="otherInfo">Other Information:</label>
-            <textarea id="otherInfo" rows="2"></textarea>
+            <textarea id="otherInfo" rows="2" name="otherInfo"></textarea>
         </div>
 
         <button type="submit">Submit</button>
