@@ -27,7 +27,7 @@ DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://placemet-managemet-system-1.onrender.com']
 # This is the domain name of your application on Render
-ALLOWED_HOSTS = ['placemet-managemet-system-1.onrender.com']
+ALLOWED_HOSTS = ['placemet-managemet-system-1.onrender.com','127.0.0.1']
 
 
 # Application definition
