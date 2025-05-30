@@ -100,7 +100,8 @@
 
 <div class="container">
     <h2>Admin Registration Form</h2>
-    <form id="adminForm">
+    <form id="adminForm" method="post"class="form-control" action="{% url 'admin_list' %}">
+         {% csrf_token %}
 
         <div class="form-group">
             <label for="adminName">Full Name:</label>

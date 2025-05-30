@@ -100,7 +100,8 @@
 
 <div class="container">
     <h2>Company Registration Form</h2>
-    <form id="companyForm">
+    <form id="companyForm" method="post"class="form-control" action="{% url 'company_list' %}">
+         {% csrf_token %}
 
         <div class="form-group">
             <label for="companyName">Company Name:</label>
