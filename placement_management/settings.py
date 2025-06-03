@@ -84,6 +84,7 @@ DATABASES = {
         'PASSWORD': os.getenv('MYSQLPASSWORD'), # Password
         'HOST': os.getenv('MYSQLHOST'),        # Database host
         'PORT': os.getenv('MYSQLPORT', '3306'), # Default MySQL port
+        'MYSQL_URl': os.getenv('mysql://root:HsKXgxRJsMCmpxaDWHUPWHIFeueRSnje@mysql.railway.internal:3306/railway'),
     }
 }
 
