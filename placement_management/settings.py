@@ -78,13 +78,12 @@ WSGI_APPLICATION = 'placement_management.wsgi.application'
 import os
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('MYSQL_DATABASE'),   # Database name
-        'USER': os.getenv('MYSQLUSER'),        # Username
-        'PASSWORD': os.getenv('MYSQLPASSWORD'), # Password
-        'HOST': os.getenv('MYSQLHOST'),        # Database host
-        'PORT': os.getenv('MYSQLPORT', '3306'), # Default MySQL port
-        'MYSQL_URl': os.getenv('mysql://root:HsKXgxRJsMCmpxaDWHUPWHIFeueRSnje@mysql.railway.internal:3306/railway'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB', 'project_management_server'),
+        'USER': os.getenv('POSTGRES_USER', 'project_management_server_user'),
+        'PASSWORD': os.getenv('xLkVN0cCDxQFVBJvF0gIVNvR7iz3qxjl'),
+        'HOST': os.getenv('POSTGRES_HOST', 'dpg-d0vhr6p5pdvs738hu1k0-a'),
+        'PORT': os.getenv('POSTGRES_PORT', '5432'),
     }
 }
 
