@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Student, Company, Admin
+from django.middleware.csrf import get_token
 
 # Home page
 def home(request):
@@ -141,6 +142,7 @@ def login_view(request):
             request.session['logged_in'] = True
             request.session['username'] = username
             request.session['user_type'] = user_type
+            request.session["csrf_token"] = get_token(request)
             return redirect('home')
         else:
             messages.error(request, 'Invalid username or password.')
