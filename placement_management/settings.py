@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'placement_management.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('MYSQL_DATABASE'),   # Database name
+        'USER': os.getenv('MYSQLUSER'),        # Username
+        'PASSWORD': os.getenv('MYSQLPASSWORD'), # Password
+        'HOST': os.getenv('MYSQLHOST'),        # Database host
+        'PORT': os.getenv('MYSQLPORT', '3306'), # Default MySQL port
     }
 }
 
