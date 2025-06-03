@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'placement_management.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
+import os
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
