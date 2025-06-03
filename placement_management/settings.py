@@ -134,7 +134,3 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-SESSION_COOKIE_AGE = 3600  # 1 hour
-CSRF_COOKIE_AGE = 3600  # 1 hour
-CSRF_COOKIE_HTTPONLY = True  # Adds extra security
-
